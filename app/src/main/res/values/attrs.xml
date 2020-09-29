@@ -9,4 +9,8 @@
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="PersonaInquiryTheme">
+        <attr name="personaBodyTextAppearance" format="reference" />
+        <attr name="personaTitleTextAppearance" format="reference" />
+    </declare-styleable>
 </resources>

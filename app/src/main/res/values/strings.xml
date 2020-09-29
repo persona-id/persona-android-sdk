@@ -1,5 +1,22 @@
 <resources>
     <string name="app_name">Persona SDK Demo</string>
     <string name="prompt">Time to verify your identity!<br /> Choose your use case</string>
-    <string name="disclaimer">Paws is a fictitious app made by the folks at <a href="https://www.withpersona.com">Persona</a>, to showcase the mobile SDK capabilities. Any similarties with real life are purely coincidental.</string>
+    <string name="disclaimer">Paws is a fictitious app made by the folks at <a href="https://www.withpersona.com">Persona</a>, to showcase the mobile SDK capabilities. Any similarities with real life are purely coincidental.</string>
+
+    <!-- Strings that can be customized to suit your app. Provided values matches Persona defaults. -->
+    <!--    <string name="persona_contact_support_body">Enter your email and we’ll reach out shortly to help you.</string>-->
+    <!--    <string name="persona_contact_support_button">Send</string>-->
+    <!--    <string name="persona_contact_support_title">Verification failed</string>-->
+    <!--    <string name="persona_countryselect_body">This helps us determine the best way to verify your identity.</string>-->
+    <!--    <string name="persona_countryselect_button">Select Country</string>-->
+    <!--    <string name="persona_countryselect_title">What country is your government ID from?</string>-->
+    <!--    <string name="persona_inquiry_complete_body">Thanks for verifying your identity.</string>-->
+    <!--    <string name="persona_inquiry_complete_button">Done</string>-->
+    <!--    <string name="persona_inquiry_complete_title">Congratulations, you’re done!</string>-->
+    <!--    <string name="persona_inquiry_failed_body">We were unable to verify your identity.</string>-->
+    <!--    <string name="persona_inquiry_failed_button">Close</string>-->
+    <!--    <string name="persona_inquiry_failed_title">Could not verify your identity</string>-->
+    <!--    <string name="persona_inquiry_start_body">Let’s make sure you’re you</string>-->
+    <!--    <string name="persona_inquiry_start_button">Get started</string>-->
+    <!--    <string name="persona_inquiry_start_title">Verify your identity</string>-->
 </resources>

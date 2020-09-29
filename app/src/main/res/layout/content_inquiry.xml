@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:id="@+id/selection_human"
+        android:id="@+id/select_human"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -25,15 +25,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/btn_human"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@null"
             android:contentDescription="cartoon human face"
             android:src="@drawable/ic_human" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@null"
             android:fontFamily="@font/longdrina_solid_regular"
             android:text="Human"
             android:textAlignment="center"
@@ -42,17 +45,20 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/select_pawsona"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/selection_human"
+        app:layout_constraintBottom_toBottomOf="@+id/select_human"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/selection_human">
+        app:layout_constraintStart_toEndOf="@+id/select_human">
 
-        <ImageView
+        <ImageButton
+            android:id="@+id/btn_pawsona"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@null"
             android:contentDescription="cartoon animal face"
             android:src="@drawable/ic_pawsona" />
 
