@@ -1,9 +1,9 @@
-package com.persona.sdk.demo
+package com.withpersona.sdk.demo
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.persona.sdk.demo.databinding.ActivityMainBinding
+import com.withpersona.sdk.demo.databinding.ActivityMainBinding
 import com.withpersona.sdk.inquiry.Attributes
 import com.withpersona.sdk.inquiry.Environment
 import com.withpersona.sdk.inquiry.Inquiry
@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         /** Choose your own request code to receive inquiry results in [onActivityResult] */
         private const val INQUIRY_REQUEST_CODE = 2020
 
-        /** TODO: replace this ID with your own template from withpersona.com */
-        private const val TEMPLATE_ID = "tmpl_PUT_YOUR_TEMPLATE_ID_HERE"
+        /** Replace this ID with your own template from withpersona.com */
+        private val TEMPLATE_ID: String = TODO("tmpl_PUT_YOUR_TEMPLATE_ID_HERE")
     }
 
     private lateinit var binding: ActivityMainBinding

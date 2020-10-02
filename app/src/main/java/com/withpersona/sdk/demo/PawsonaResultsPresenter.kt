@@ -1,4 +1,4 @@
-package com.persona.sdk.demo
+package com.withpersona.sdk.demo
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -8,9 +8,9 @@ import android.text.SpannableStringBuilder
 import android.text.style.StyleSpan
 import android.view.View
 import androidx.activity.OnBackPressedCallback
-import com.persona.sdk.demo.databinding.ActivityMainBinding
-import com.persona.sdk.demo.databinding.ContentInquiryBinding
-import com.persona.sdk.demo.databinding.ContentResultBinding
+import com.withpersona.sdk.demo.databinding.ActivityMainBinding
+import com.withpersona.sdk.demo.databinding.ContentInquiryBinding
+import com.withpersona.sdk.demo.databinding.ContentResultBinding
 
 /**
  * Presenter to help display the results page for this demo app.

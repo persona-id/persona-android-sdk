@@ -16,7 +16,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.persona.sdk.demo"
+        applicationId "com.withpersona.sdk.demo"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

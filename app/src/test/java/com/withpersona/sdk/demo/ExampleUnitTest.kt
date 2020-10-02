@@ -1,4 +1,4 @@
-package com.persona.sdk.demo
+package com.withpersona.sdk.demo
 
 import org.junit.Test
 
