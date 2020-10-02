@@ -77,23 +77,21 @@ class MainActivity : AppCompatActivity() {
         if (requestCode == INQUIRY_REQUEST_CODE) {
             when (val result = Inquiry.onActivityResult(data)) {
                 is Inquiry.Response.Success -> {
+                    val values = mutableListOf("Inquiry Id" to result.inquiryId)
+                    addAttributes(values, result.attributes)
+                    addRelationships(values, result.relationships)
                     resultPresenter.showResults(
                         title = "Inquiry Succeeded",
-                        values = ResultValues()
-                            .inquiryId(result.inquiryId)
-                            .attributes(result.attributes)
-                            .relationships(result.relationships)
-                            .values
+                        values = values
                     )
                 }
                 is Inquiry.Response.Failure -> {
+                    val values = mutableListOf("Inquiry Id" to result.inquiryId)
+                    addAttributes(values, result.attributes)
+                    addRelationships(values, result.relationships)
                     resultPresenter.showResults(
                         title = "Inquiry Failed",
-                        values = ResultValues()
-                            .inquiryId(result.inquiryId)
-                            .attributes(result.attributes)
-                            .relationships(result.relationships)
-                            .values
+                        values = values
                     )
                 }
                 is Inquiry.Response.Cancel -> {
@@ -112,49 +110,45 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+}
 
-    /**
-     * Present relevant [Inquiry] information as a list of labeled values.
-     *
-     * Only used for this demo app.
-     */
-    private class ResultValues(val values: MutableList<Pair<String, String>> = mutableListOf()) {
-
-        companion object {
-            private val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+/**
+ * Helper functions to present relevant [Inquiry] information as a list of labeled values.
+ *
+ * Only used for this demo app.
+ */
+private fun addAttributes(
+    values: MutableList<Pair<String, String>>,
+    attributes: Attributes
+) = values.apply {
+    attributes.apply {
+        name?.let { name ->
+            name.first?.let { add("First Name" to it) }
+            name.middle?.let { add("Middle Name" to it) }
+            name.last?.let { add("Last Name" to it) }
         }
-
-        fun inquiryId(id: String): ResultValues = apply {
-            values.add("Inquiry Id" to id)
+        address?.let { address ->
+            address.countryCode?.let { add("Country Code" to it) }
+            address.street1?.let { add("Street" to it) }
+            address.street2?.let { add("APT/Unit" to it) }
+            address.city?.let { add("City" to it) }
+            address.subdivision?.let { add("Subdivision" to it) }
+            address.postalCode?.let { add("Postal Code" to it) }
         }
-
-        fun attributes(attributes: Attributes): ResultValues = apply {
-            attributes.apply {
-                name?.let { name ->
-                    name.first?.let { values.add("First Name" to it) }
-                    name.middle?.let { values.add("Middle Name" to it) }
-                    name.last?.let { values.add("Last Name" to it) }
-                }
-                address?.let { address ->
-                    address.countryCode?.let { values.add("Country Code" to it) }
-                    address.street1?.let { values.add("Street" to it) }
-                    address.street2?.let { values.add("APT/Unit" to it) }
-                    address.city?.let { values.add("City" to it) }
-                    address.subdivision?.let { values.add("Subdivision" to it) }
-                    address.postalCode?.let { values.add("Postal Code" to it) }
-                }
-                birthdate?.let {
-                    values.add("Birthdate" to dateFormat.format(it))
-                }
-            }
+        birthdate?.let {
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+            add("Birthdate" to dateFormat.format(it))
         }
+    }
+}
 
-        fun relationships(relationships: Relationships): ResultValues = apply {
-            relationships.verifications.withIndex().forEach {
-                val verification = it.value
-                val content = "id: ${verification.id}\nstatus: ${verification.status}"
-                values.add("Verification ${it.index + 1}" to content)
-            }
-        }
+private fun addRelationships(
+    values: MutableList<Pair<String, String>>,
+    relationships: Relationships
+) = values.apply {
+    relationships.verifications.withIndex().forEach {
+        val verification = it.value
+        val content = "id: ${verification.id}\nstatus: ${verification.status}"
+        add("Verification ${it.index + 1}" to content)
     }
 }
