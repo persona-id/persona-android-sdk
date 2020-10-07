@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="Pawsona.Spot.Yellow">#FFDE84</color>
+    <color name="Pawsona.Spot.Strawberry">#E43886</color>
+    <color name="Pawsona.Spot.Lavender">#8088F6</color>
+
+    <color name="Pawsona.Text.Primary">#1F1141</color>
+    <color name="Pawsona.Text.Secondary">#3D4589</color>
+    <color name="Pawsona.Text.Tertiary">#5B63AD</color>
+
+    <color name="Pawsona.Background.Medium">#D6DAF7</color>
+    <color name="Pawsona.Background.Soft">#E6E8F6</color>
+</resources>
