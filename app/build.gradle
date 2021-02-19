@@ -1,9 +1,15 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
+repositories {
+    maven {
+        // Maven repository for Persona Android SDK
+        url 'https://sdk.withpersona.com/android/releases'
+    }
+}
+
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.2"
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
