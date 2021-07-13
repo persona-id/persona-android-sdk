@@ -39,7 +39,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.withpersona.sdk:inquiry:1.1.5'
+    implementation 'com.withpersona.sdk:inquiry:1.1.7'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
