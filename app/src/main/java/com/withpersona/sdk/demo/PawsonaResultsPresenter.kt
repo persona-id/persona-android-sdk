@@ -11,6 +11,7 @@ import androidx.activity.OnBackPressedCallback
 import com.withpersona.sdk.demo.databinding.ActivityMainBinding
 import com.withpersona.sdk.demo.databinding.ContentInquiryBinding
 import com.withpersona.sdk.demo.databinding.ContentResultBinding
+import com.withpersona.sdk.inquiry.InquiryField
 
 /**
  * Presenter to help display the results page for this demo app.
@@ -58,7 +59,7 @@ internal class PawsonaResultsPresenter(
     /**
      * Show a message [title] and format [values] as a list of entries in the content box.
      */
-    fun showResults(title: String, values: List<Pair<String, String>>) {
+    fun showResults(title: String, values: List<Pair<String, InquiryField>>) {
         val builder = SpannableStringBuilder()
         for ((label, value) in values) {
             val length = builder.length
@@ -69,7 +70,13 @@ internal class PawsonaResultsPresenter(
                 builder.length,
                 SPAN_EXCLUSIVE_EXCLUSIVE
             )
-            builder.appendLine(value)
+            val stringValue: String = when (value) {
+                is InquiryField.IntegerField -> value.value.toString()
+                is InquiryField.BooleanField -> value.value.toString()
+                is InquiryField.StringField -> value.value.toString()
+                is InquiryField.UnknownField -> "Unknown"
+            }
+            builder.appendLine(stringValue)
             builder.appendLine()
         }
         showResults(title, builder)
