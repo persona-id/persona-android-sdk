@@ -1,8 +1,8 @@
 <resources>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/Pawsona.Spot.Yellow</item>
-        <item name="colorPrimaryDark">@color/Pawsona.Text.Secondary</item>
-        <item name="colorAccent">@color/Pawsona.Text.Secondary</item>
+        <item name="colorPrimaryVariant">@color/Pawsona.Text.Secondary</item>
+        <item name="colorSecondary">@color/Pawsona.Text.Secondary</item>
         <item name="android:textColor">@color/Pawsona.Text.Secondary</item>
     </style>
 
@@ -12,11 +12,11 @@
     <!-- Define a custom theme to be used. Colors and text appearances can be customized. -->
     <style name="PersonaThemeCustom" parent="Persona.Inquiry.Theme">
         <item name="colorPrimary">@color/Pawsona.Spot.Lavender</item>
-        <item name="colorPrimaryDark">@color/Pawsona.Text.Secondary</item>
-        <item name="colorAccent">@color/Pawsona.Spot.Yellow</item>
+        <item name="colorPrimaryVariant">@color/Pawsona.Text.Secondary</item>
+        <item name="colorSecondary">@color/Pawsona.Spot.Yellow</item>
 
-        <item name="personaBodyTextAppearance">@style/PawsonaBodyTextAppearance</item>
-        <item name="personaTitleTextAppearance">@style/PawsonaTitleTextAppearance</item>
+        <item name="textAppearanceSubtitle1">@style/PawsonaBodyTextAppearance</item>
+        <item name="textAppearanceHeadline6">@style/PawsonaTitleTextAppearance</item>
     </style>
     
     <style name="PawsonaTitleTextAppearance" parent="Persona.Text.Title">
