@@ -7,8 +7,8 @@ import com.withpersona.sdk.demo.databinding.ActivityMainBinding
 import com.withpersona.sdk.inquiry.*
 
 /**
- * [MainActivity] showcases how to start the Persona SDK inquiry flow through [Inquiry], and
- * handles the result in [onActivityResult].
+ * [MainActivity] showcases how to start the Persona SDK inquiry flow with the [Inquiry.Contract]
+ * and [Inquiry.fromTemplate] builder.
  */
 class MainActivity : AppCompatActivity() {
     companion object {
