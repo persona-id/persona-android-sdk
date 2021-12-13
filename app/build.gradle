@@ -11,6 +11,7 @@ repositories {
 }
 
 android {
+    namespace 'com.withpersona.sdk.demo'
     compileSdk 31
 
     buildFeatures {
@@ -36,7 +37,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.withpersona.sdk:inquiry:2.1.0'
+    implementation 'com.withpersona.sdk:inquiry:2.1.1'
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
