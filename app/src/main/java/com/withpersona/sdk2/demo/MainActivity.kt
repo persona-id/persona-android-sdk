@@ -1,10 +1,10 @@
-package com.withpersona.sdk.demo
+package com.withpersona.sdk2.demo
 
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.withpersona.sdk.demo.databinding.ActivityMainBinding
-import com.withpersona.sdk.inquiry.*
+import com.withpersona.sdk2.demo.databinding.ActivityMainBinding
+import com.withpersona.sdk2.inquiry.*
 
 /**
  * [MainActivity] showcases how to start the Persona SDK inquiry flow with the [Inquiry.Contract]

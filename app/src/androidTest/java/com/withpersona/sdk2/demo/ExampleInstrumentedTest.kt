@@ -1,4 +1,4 @@
-package com.withpersona.sdk.demo
+package com.withpersona.sdk2.demo
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4
@@ -17,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.withpersona.sdk.demo", appContext.packageName)
+        assertEquals("com.withpersona.sdk2.demo", appContext.packageName)
     }
 }
