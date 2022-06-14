@@ -27,3 +27,11 @@ git clone https://github.com/persona-id/persona-android-sdk.git
 # Documentation
 
 If you'd like the more information, please [check out the documentation](https://docs.withpersona.com/docs/native-mobile-sdks) or if you have questions, feel free to contact support@withpersona.com.
+
+# Privacy Configuration
+
+This SDK collects a user’s [App-Set ID](https://developer.android.com/training/articles/app-set-id) for Fraud Prevention purposes. When publishing to the Play Store, disclose the usage of Device Identifiers as follows:
+
+| Data Types | Collected | Shared | Processed Ephemerally | Required or Optional | Purposes |
+| --- | --- | --- | --- | --- | --- |
+| Device or other IDs | Yes | No | No | Required | Fraud Prevention |
