@@ -74,6 +74,9 @@ internal class PawsonaResultsPresenter(
                 is InquiryField.IntegerField -> value.value.toString()
                 is InquiryField.BooleanField -> value.value.toString()
                 is InquiryField.StringField -> value.value.toString()
+                is InquiryField.FloatField -> value.value.toString()
+                is InquiryField.DateField -> value.value.toString()
+                is InquiryField.DatetimeField -> value.value.toString()
                 is InquiryField.UnknownField -> "Unknown"
             }
             builder.appendLine(stringValue)
