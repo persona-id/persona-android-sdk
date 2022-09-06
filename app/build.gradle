@@ -12,7 +12,7 @@ repositories {
 
 android {
     namespace 'com.withpersona.sdk2.demo'
-    compileSdk 31
+    compileSdk 33
 
     buildFeatures {
         viewBinding true
@@ -21,7 +21,7 @@ android {
     defaultConfig {
         applicationId "com.withpersona.sdk2.demo"
         minSdk 21
-        targetSdk 31
+        targetSdk 33
         versionCode 1
         versionName "1.0"
 
