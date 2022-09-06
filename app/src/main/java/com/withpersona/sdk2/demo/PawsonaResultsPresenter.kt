@@ -107,7 +107,7 @@ internal class PawsonaResultsPresenter(
             .translationX(0f)
             .setDuration(duration)
             .setListener(object : AnimatorListenerAdapter() {
-                override fun onAnimationStart(animation: Animator?) {
+                override fun onAnimationStart(animation: Animator) {
                     alpha = 0f
                     translationX = -translateX
                     visibility = View.VISIBLE
@@ -121,7 +121,7 @@ internal class PawsonaResultsPresenter(
             .translationX(translateX)
             .setDuration(duration)
             .setListener(object : AnimatorListenerAdapter() {
-                override fun onAnimationStart(animation: Animator?) {
+                override fun onAnimationStart(animation: Animator) {
                     alpha = 1f
                     translationX = 0f
                 }
