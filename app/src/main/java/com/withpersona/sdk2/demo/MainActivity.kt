@@ -71,6 +71,7 @@ class MainActivity : AppCompatActivity() {
                     getInquiry.launch(
                         Inquiry.fromTemplate(TEMPLATE_ID)
                             .environment(Environment.SANDBOX)
+                            .theme(ServerThemeSource(null))
                             .build()
                     )
                 }
@@ -82,7 +83,10 @@ class MainActivity : AppCompatActivity() {
                     getInquiry.launch(
                         Inquiry.fromTemplate(TEMPLATE_ID)
                             .environment(Environment.SANDBOX)
-                            .theme(R.style.PersonaThemeCustom)
+                            // Note that using ClientThemeSource is deprecated (in a production build,
+                            // you would use ServerThemeSource instead). This is just an example to show
+                            // what can be configured on an arbitrary template inside of the dashboard.
+                            .theme(ClientThemeSource(R.style.PersonaThemeCustom))
                             .build()
                     )
                 }
