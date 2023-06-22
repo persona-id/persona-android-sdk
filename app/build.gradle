@@ -14,6 +14,14 @@ android {
     namespace 'com.withpersona.sdk2.demo'
     compileSdk 33
 
+    // https://kotl.in/gradle/jvm/toolchain
+    // Whenever a stable AGP > 8.1.0-alpha09 is out
+    // this `compileOptions` block can be removed.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
     buildFeatures {
         viewBinding true
     }
@@ -37,9 +45,9 @@ android {
 }
 
 dependencies {
-    implementation 'com.withpersona.sdk2:inquiry:2.4.0'
+    implementation 'com.withpersona.sdk2:inquiry:2.6.2'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
