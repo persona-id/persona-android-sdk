@@ -8,6 +8,8 @@ repositories {
         // Maven repository for Persona Android SDK
         url 'https://sdk.withpersona.com/android/releases'
     }
+    maven { url = uri("https://jitpack.io") }
+    jcenter()
 }
 
 android {
@@ -45,7 +47,9 @@ android {
 }
 
 dependencies {
-    implementation 'com.withpersona.sdk2:inquiry:2.6.2'
+    implementation 'com.withpersona.sdk2:inquiry:2.10.9'
+    implementation 'com.withpersona.sdk2:nfc-impl:2.10.9'
+    implementation 'com.withpersona.sdk2:webrtc-impl:2.10.9'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
