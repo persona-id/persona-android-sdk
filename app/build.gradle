@@ -9,7 +9,7 @@ repositories {
         url 'https://sdk.withpersona.com/android/releases'
     }
     maven { url = uri("https://jitpack.io") }
-    jcenter()
+    maven { url = uri("https://plugins.gradle.org/m2/") }
 }
 
 android {
