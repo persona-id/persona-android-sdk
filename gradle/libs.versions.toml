@@ -3,7 +3,7 @@ androidGradlePlugin = "8.1.2"
 appcompat = "1.6.1"
 kotlin = "1.9.21"
 material = "1.10.0"
-persona = "2.10.9"
+persona = "2.10.12"
 
 [libraries]
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
