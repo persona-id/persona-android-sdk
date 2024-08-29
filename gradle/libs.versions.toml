@@ -1,9 +1,9 @@
 [versions]
-androidGradlePlugin = "8.1.2"
-appcompat = "1.6.1"
-kotlin = "1.9.21"
-material = "1.10.0"
-persona = "2.10.12"
+androidGradlePlugin = "8.5.2"
+appcompat = "1.7.0"
+kotlin = "2.0.0"
+material = "1.12.0"
+persona = "2.12.4"
 
 [libraries]
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
