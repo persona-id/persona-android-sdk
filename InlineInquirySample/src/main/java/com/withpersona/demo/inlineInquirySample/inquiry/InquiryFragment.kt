@@ -133,6 +133,7 @@ class InquiryFragment : Fragment(), InlineInquiryController {
                         .fromTemplate(TEMPLATE_ID)
                         .environment(Environment.SANDBOX)
                         .toInlineInquiryBuilder()
+                        .controlStatusBar(false)
 
                         // This example hosts the inquiry flow within a larger screen with it's own
                         // navigation bar so we do not want the inquiry flow to display it's own
