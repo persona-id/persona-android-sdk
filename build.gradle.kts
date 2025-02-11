@@ -3,6 +3,7 @@
 plugins {
     alias(libs.plugins.android.application) apply false
     alias(libs.plugins.kotlin.android) apply false
+    alias(libs.plugins.kotlin.compose) apply false
 }
 
 allprojects {
@@ -13,8 +14,4 @@ allprojects {
         maven { url = uri("https://jitpack.io") }
         maven { url = uri("https://plugins.gradle.org/m2/") }
     }
-}
-
-task<Delete>("clean") {
-    delete(rootProject.buildDir)
 }

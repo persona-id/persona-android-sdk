@@ -1,4 +1,5 @@
-include(":app")
+include(":BasicInquirySample")
+include(":InlineInquirySample")
 
 rootProject.name = "Persona SDK Demo"
 

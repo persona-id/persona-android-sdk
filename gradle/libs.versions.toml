@@ -1,9 +1,14 @@
 [versions]
+compileSdk = "35"
+targetSdk = "35"
+minSdk = "21"
+
 androidGradlePlugin = "8.5.2"
 appcompat = "1.7.0"
 kotlin = "2.0.0"
 material = "1.12.0"
 persona = "2.12.17"
+navigation = "2.8.6"
 
 [libraries]
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
@@ -11,7 +16,11 @@ material = { module = "com.google.android.material:material", version.ref = "mat
 persona-inquiry = { module = "com.withpersona.sdk2:inquiry", version.ref = "persona" }
 persona-nfc = { module = "com.withpersona.sdk2:nfc-impl", version.ref = "persona" }
 persona-webrtc = { module = "com.withpersona.sdk2:webrtc-impl", version.ref = "persona" }
+navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation"}
+navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation"}
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+navigation-safeargs = { id = "androidx.navigation.safeargs", version.ref = "navigation" }

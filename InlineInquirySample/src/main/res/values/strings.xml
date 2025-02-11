@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">InlineInquirySample</string>
+    <string name="title_intro">Welcome.</string>
+    <string name="button_verify">Verify now</string>
+    <string name="title_verify">Verify.</string>
+    <string name="text_verify">Please verify yourself in the box below.</string>
+    <string name="error_verify">There was an error during identity verification.</string>
+    <string name="button_ok">Ok</string>
+    <string name="text_verified">Verification complete.</string>
+    <string name="button_continue">Continue</string>
+</resources>
