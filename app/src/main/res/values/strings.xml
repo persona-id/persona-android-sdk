@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Persona SDK Demo</string>
-    <string name="prompt">Time to verify your identity!<br /> Choose your use case</string>
+    <string name="prompt">Time to verify your identity!</string>
     <string name="disclaimer">Paws is a fictitious app made by the folks at <a href="https://www.withpersona.com">Persona</a>, to showcase the mobile SDK capabilities. Any similarities with real life are purely coincidental.</string>
 </resources>

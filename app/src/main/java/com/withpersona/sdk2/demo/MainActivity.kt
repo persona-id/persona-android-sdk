@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var resultPresenter: PawsonaResultsPresenter
 
-    private val getInquiry = registerForActivityResult(Inquiry.Contract()) { inquiry ->
+    private val getInquiry = registerForActivityResult(Inquiry.Contract(this)) { inquiry ->
         when (inquiry) {
             is InquiryResponse.Complete -> {
                 resultPresenter.showResults(
@@ -57,10 +57,6 @@ class MainActivity : AppCompatActivity() {
          *
          * "Human":     starts an inquiry with Persona's default theme, this is how your flow will
          *              look like if no custom theme is required.
-         *
-         * "Pawsona":   starts an inquiry with a custom theme [R.style.PersonaThemeCustom], you can
-         *              find the example in res/styles and tweak the styles for your own app.
-         *
          * Both inquiries are run in [Environment.SANDBOX] for testing out your flow.
          */
         binding.apply {
@@ -71,22 +67,6 @@ class MainActivity : AppCompatActivity() {
                     getInquiry.launch(
                         Inquiry.fromTemplate(TEMPLATE_ID)
                             .environment(Environment.SANDBOX)
-                            .theme(ServerThemeSource(null))
-                            .build()
-                    )
-                }
-            }
-            startInquiryView.btnPawsona.setOnClickListener {
-                if (TEMPLATE_ID.contains("PUT_YOUR_TEMPLATE_ID_HERE")) {
-                    remindToUseTemplateId()
-                } else {
-                    getInquiry.launch(
-                        Inquiry.fromTemplate(TEMPLATE_ID)
-                            .environment(Environment.SANDBOX)
-                            // Note that using ClientThemeSource is deprecated (in a production build,
-                            // you would use ServerThemeSource instead). This is just an example to show
-                            // what can be configured on an arbitrary template inside of the dashboard.
-                            .theme(ClientThemeSource(R.style.PersonaThemeCustom))
                             .build()
                     )
                 }
